@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import { useAnalytics } from '~/components/context/analytics'
 import Modal from '~/components/shared/modal'
-import { BASE_DOMAIN, CHECKOUT_URL } from '~/utils/constants'
+import { BASE_DOMAIN, CHECKOUT_URL, LOGIN_LIMIT_COUNT } from '~/utils/constants'
 import { getRedirectURL } from '~/utils/getRedirectUrl'
 
 const SignInModal = ({
@@ -29,7 +29,7 @@ const SignInModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">登录 BibiGPT</h3>
           <h4>
-            1日あたり{LOGIN_LIMIT_COUNT} 回がもらえる，
+            1日あたり{LOGIN_LIMIT_COUNT}回がもらえる，
             <a
               className="relative text-pink-400 hover:underline"
               href={CHECKOUT_URL}
