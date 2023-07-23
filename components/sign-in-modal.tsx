@@ -29,7 +29,7 @@ const SignInModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">登录 BibiGPT</h3>
           <h4>
-            （1日あたり {LOGIN LIMIT_COUNT} 回がもらえる，
+            1日あたり{LOGIN_LIMIT_COUNT} 回がもらえる，
             <a
               className="relative text-pink-400 hover:underline"
               href={CHECKOUT_URL}
@@ -37,7 +37,7 @@ const SignInModal = ({
             >
               クリックして購入
             </a>
-            新しい回数）
+            新しい回数
           </h4>
           <p className="text-sm text-pink-400">Input, Prompt, Output</p>
         </div>
