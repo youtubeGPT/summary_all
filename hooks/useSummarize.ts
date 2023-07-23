@@ -37,22 +37,22 @@ export function useSummarize(showSingIn: (show: boolean) => void, enableStream: 
         console.log('error', response)
         if (response.status === 501) {
           toast({
-            title: '啊叻？视频字幕不见了？！',
-            description: `\n（这个视频太短了...\n或者还没有字幕哦！）`,
+            title: 'ああ？ ビデオの字幕が表示されない ！',
+            description: `\n（このビデオは短すぎます...\nまたは、まだ字幕がありません!）`,
           })
         } else if (response.status === 504) {
           toast({
             variant: 'destructive',
-            title: `网站访问量过大`,
-            description: `每日限额使用 ${RATE_LIMIT_COUNT} 次哦！`,
+            title: `ウェブサイトのトラフィックが多すぎる`,
+            description: `1 日あたりの使用量の上限は ${RATE_LIMIT_COUNT} です。`,
           })
         } else if (response.status === 401) {
           toast({
             variant: 'destructive',
-            title: `${response.statusText} 请登录哦！`,
+            title: `${response.statusText} ログインしてください！`,
             // ReadableStream can't get error message
             // description: response.body
-            description: '每天的免费次数已经用完啦，🆓',
+            description: '毎日の回数を使い果たしました。🆓',
           })
           showSingIn(true)
         } else {
@@ -94,7 +94,7 @@ export function useSummarize(showSingIn: (show: boolean) => void, enableStream: 
         setLoading(false)
         toast({
           variant: 'destructive',
-          title: 'API 请求出错，请重试。',
+          title: 'API リクエストでエラーが発生しました。もう一度お試しください。',
           description: result.errorMessage,
         })
         return
@@ -105,7 +105,7 @@ export function useSummarize(showSingIn: (show: boolean) => void, enableStream: 
       console.error('[fetch ERROR]', e)
       toast({
         variant: 'destructive',
-        title: '未知错误：',
+        title: '未知のエラー：',
         description: e.message || e.errorMessage,
       })
       setLoading(false)

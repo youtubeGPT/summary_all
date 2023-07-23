@@ -3,10 +3,10 @@ import { Auth } from '@supabase/auth-ui-react'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
+import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import { useAnalytics } from '~/components/context/analytics'
 import Modal from '~/components/shared/modal'
-import { BASE_DOMAIN, CHECKOUT_URL, LOGIN_LIMIT_COUNT } from '~/utils/constants'
+import { BASE_DOMAIN, CHECKOUT_URL } from '~/utils/constants'
 import { getRedirectURL } from '~/utils/getRedirectUrl'
 
 const SignInModal = ({
@@ -29,15 +29,15 @@ const SignInModal = ({
           </a>
           <h3 className="font-display text-2xl font-bold">登录 BibiGPT</h3>
           <h4>
-            （每天都赠送 {LOGIN_LIMIT_COUNT} 次哦，
+            （1日あたり {LOGIN LIMIT_COUNT} 回がもらえる，
             <a
               className="relative text-pink-400 hover:underline"
               href={CHECKOUT_URL}
               onClick={() => analytics.track('ShopLink Clicked')}
             >
-              点击购买
+              クリックして購入
             </a>
-            新的次数）
+            新しい回数）
           </h4>
           <p className="text-sm text-pink-400">Input, Prompt, Output</p>
         </div>
@@ -49,10 +49,10 @@ const SignInModal = ({
             localization={{
               variables: {
                 sign_up: {
-                  social_provider_text: '使用 {{provider}} 注册',
+                  social_provider_text: '{{provider}} で登録する',
                 },
                 sign_in: {
-                  social_provider_text: '使用 {{provider}} 登录',
+                  social_provider_text: '{{provider}} で登録する',
                 },
               },
             }}
@@ -79,13 +79,13 @@ const SignInModal = ({
           />
         </div>
         <p className="pb-6 text-center text-slate-400">
-          点击登录或注册，即同意
+        クリックしてログインすると、
           <a href="/terms-of-use" target="_blank" className="group underline" aria-label="服务条款">
-            服务条款
+          利用規約
           </a>
-          和
+          と
           <Link href="/privacy" target="_blank" className="group underline" aria-label="隐私声明">
-            隐私政策
+          プライバシーポリシーを同意する
           </Link>
           。
         </p>

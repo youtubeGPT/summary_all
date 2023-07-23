@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import { SaveNoteButton } from '~/components/SaveNoteButton'
 import { useSaveToFlomo } from '~/hooks/notes/flomo'
 import useSaveToLark from '~/hooks/notes/lark'
@@ -28,7 +27,7 @@ export function ActionsAfterResult({
         target="_blank"
         rel="noopener noreferrer"
       >
-        （关注我 😛）
+        （フォローしてください 😛）
       </a>
       <a
         href={curVideo}
@@ -36,13 +35,13 @@ export function ActionsAfterResult({
         target="_blank"
         rel="noreferrer"
       >
-        回到视频
+        ビデオに戻る
       </a>
       <button
         className="w-24 cursor-pointer rounded-lg bg-sky-400 px-2 py-1 text-center font-medium text-white hover:bg-sky-400/80"
         onClick={onCopy}
       >
-        一键复制
+        コピー
       </button>
       {!hasNoteSetting ? (
         <Link
@@ -50,7 +49,7 @@ export function ActionsAfterResult({
           href="/user/integration"
           target="_blank"
         >
-          📒 一键保存到笔记
+          📒 メモに保存
         </Link>
       ) : (
         <>

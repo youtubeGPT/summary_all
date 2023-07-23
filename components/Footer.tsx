@@ -1,7 +1,7 @@
+import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { ModeToggle } from '~/components/mode-toggle'
 import { Icons } from './icons'
-import { buttonVariants } from '@/components/ui/button'
 
 export default function Footer() {
   return (
@@ -27,10 +27,10 @@ export default function Footer() {
         </a>
       </div>
       <div className="flex items-center space-x-1">
-        <Link href="/privacy" className="group" aria-label="隐私声明">
+        <Link href="/privacy" className="group" aria-label="プライバシーに関する声明">
           Privacy Statement
         </Link>
-        <Link href="https://twitter.com/Jimmy_JingLv" className="group" aria-label="JimmyLv on Twitter">
+        <Link href="https://twitter.com/not_set_twitter" className="group" aria-label="not_set on Twitter">
           <div
             className={buttonVariants({
               size: 'sm',
@@ -42,7 +42,7 @@ export default function Footer() {
             <span className="sr-only">Twitter</span>
           </div>
         </Link>
-        <Link href="https://github.com/JimmyLv" className="group" aria-label="JimmyLv on GitHub">
+        <Link href="https://github.com/not_set_github" className="group" aria-label="not_set on GitHub">
           <div
             className={buttonVariants({
               size: 'sm',

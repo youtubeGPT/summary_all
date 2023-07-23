@@ -1,6 +1,6 @@
 import { useAnalytics } from '~/components/context/analytics'
-import SquigglyLines from '../components/SquigglyLines'
 import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants'
+import SquigglyLines from '../components/SquigglyLines'
 
 export default () => {
   const { analytics } = useAnalytics()
@@ -8,7 +8,7 @@ export default () => {
   return (
     <div>
       <h2 className="mt-10 max-w-5xl pb-10 text-center text-4xl font-bold sm:text-7xl">
-        次数用完啦！每天都能用 {RATE_LIMIT_COUNT} 次，请点击
+      回数切れです! 1 日に {RATE_LIMIT_COUNT} 回使用できます。クリックして。
         <span className="relative whitespace-nowrap text-[#3290EE]">
           <SquigglyLines />
           <a
@@ -16,14 +16,14 @@ export default () => {
             href={CHECKOUT_URL}
             onClick={() => analytics.track('ShopLink Clicked')}
           >
-            点击购买
+          購入
           </a>
         </span>
-        次数哦，💰
+        回数、💰
         <div className="mt-8">
-          或者
+        また
           <a href="/wechat.jpg" className="text-green-400 hover:underline" target="_blank" rel="noopener noreferrer">
-            「加我微信」
+          「Wechatに私を追加してください」
           </a>
         </div>
       </h2>
@@ -33,3 +33,4 @@ export default () => {
     </div>
   )
 }
+

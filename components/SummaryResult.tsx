@@ -1,5 +1,4 @@
 import Markdown from 'marked-react'
-import React from 'react'
 import { ActionsAfterResult } from '~/components/ActionsAfterResult'
 import Sentence from '~/components/Sentence'
 import { useToast } from '~/hooks/use-toast'
@@ -31,22 +30,22 @@ export function SummaryResult({
     : summary
 
   const { summaryArray, formattedSummary } = formatSummary(formattedCachedSummary)
-  const summaryNote = formattedSummary + '\n\n#BibiGPT https://b.jimmylv.cn @吕立青_JimmyLv \nBV1fX4y1Q7Ux'
+  const summaryNote = formattedSummary + '\n\n#BibiGPT https://b.jimmylv_not_set.cn @吕立青_JimmyLv_not_set \nBV1fX4y1Q7Ux'
 
   const handleCopy = () => {
     if (!isSecureContext) {
-      toast({ description: '复制错误 ❌' })
+      toast({ description: 'コピーに失敗した ❌' })
       return
     }
     navigator.clipboard.writeText(summaryNote)
-    toast({ description: '复制成功 ✂️' })
+    toast({ description: 'コピーに成功した ✂️' })
   }
 
   return (
     <div className="mb-8 px-4">
       <h3 className="m-8 mx-auto max-w-3xl border-t-2 border-dashed pt-8 text-center text-2xl font-bold sm:text-4xl">
         <a href={currentVideoUrl} className="hover:text-pink-600 hover:underline" target="_blank" rel="noreferrer">
-          {`【📝 总结：${currentVideoId}】`}
+          {`【📝 要約する：${currentVideoId}】`}
         </a>
       </h3>
       <div className="mt-6 grid grid-cols-2 items-center gap-x-10 gap-y-2 md:mt-10 md:grid-cols-3 md:gap-y-6"></div>

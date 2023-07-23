@@ -3,10 +3,10 @@ import { BASE_DOMAIN } from '~/utils/constants'
 
 class MyDocument extends Document {
   render() {
-    let description = 'B 站视频内容一键总结（支持 iOS 快捷指令）'
+    let description = 'Youtubeビデオコンテンツのワンクリック要約（iOSショートカットコマンドをサポート）'
     let ogimage = `${BASE_DOMAIN}/og-image.png`
-    let sitename = 'b.jimmylv.cn'
-    let title = '哔哩哔哩 · 视频内容一键总结'
+    let sitename = 'b.jimmylv_not_set.cn'
+    let title = 'ワンクリックで動画コンテンツをまとめられる'
 
     return (
       <Html lang="en">

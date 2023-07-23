@@ -38,7 +38,7 @@ export default function SignIn({ showSingIn }: { showSingIn: (show: boolean) => 
             onClick={handleSignIn}
             {...FADE_IN_ANIMATION_SETTINGS}
           >
-            登录
+            ログイン
           </motion.button>
         )}
       </AnimatePresence>

@@ -1,6 +1,5 @@
-import React from 'react'
-import { useAnalytics } from '~/components/context/analytics'
-import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants'
+import { useAnalytics } from '~/components/context/analytics';
+import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants';
 
 export function UserKeyInput(props: { value: string | undefined; onChange: (e: any) => void }) {
   const { analytics } = useAnalytics()
@@ -23,8 +22,8 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
           />
         </svg>
         <p className="text-left font-medium">
-          <span className="text-sky-400 hover:text-sky-600">请使用自己的 API Key</span>
-          （每天免费 {RATE_LIMIT_COUNT} 次哦，支持
+          <span className="text-sky-400 hover:text-sky-600">独自の API キーを使用してください</span>
+          （1 日あたり {RATE_LIMIT_COUNT} 回無料、回数制限を解除するには、
           <a
             className="text-pink-400 hover:underline"
             href={CHECKOUT_URL}
@@ -32,12 +31,12 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
             rel="noopener noreferrer"
             onClick={() => analytics.track('ShopLink Clicked')}
           >
-            「购买次数」
+            「回数購入」
           </a>
-          啦！
+          ！
           <a href="/wechat.jpg" target="_blank" rel="noopener noreferrer">
-            也可以真的
-            <span className="text-pink-400 hover:underline">「给我打赏」</span>哦 🤣）
+            それとも
+            <span className="text-pink-400 hover:underline">「投げ銭を」</span> 🤣）
           </a>
         </p>
       </summary>
@@ -46,18 +45,18 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
           value={props.value}
           onChange={props.onChange}
           className="mx-auto my-4 w-full appearance-none rounded-lg rounded-md border bg-transparent py-2 pl-2 text-sm leading-6 text-slate-900 shadow-sm ring-1 ring-slate-200 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder={'填你的 OpenAI API Key: sk-xxxxxx 或者购买的 License Key: xxx-CCDE-xxx'}
+          placeholder={'OpenAI API キー: sk-xxxxxx または購入したライセンス キー: xxx-CCDE-xxx を入力します。'}
         />
         <div className="relin-paragraph-target mt-1 text-base text-slate-500">
           <div>
-            如何获取你自己的 License Key
+          自分のライセンス キーを取得する方法
             <a
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 mb-6 pl-2 font-semibold text-sky-500 dark:text-sky-400"
             >
-              https://shop.jimmylv.cn
+              https://shop.jimmylv_not_set.cn
             </a>
           </div>
         </div>

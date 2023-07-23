@@ -1,7 +1,6 @@
 import { Poppins } from '@next/font/google'
 import clsx from 'clsx'
 import Image from 'next/image'
-import React from 'react'
 import SignIn from '~/components/SignIn'
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip'
 import { BASE_DOMAIN } from '~/utils/constants'
@@ -18,7 +17,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
           </a>
           <a href={BASE_DOMAIN}>
             <h2 className={clsx('text-lg sm:text-2xl', poppins.className)}>
-              <span className="text-pink-400">哔哔终结者</span> BibiGPT
+              <span className="text-pink-400">ビープ音ターミネーター</span> BibiGPT
             </h2>
           </a>
           <div
@@ -30,7 +29,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
               href="/release"
               target="_blank"
             >
-              <strong className="font-semibold">更新日志 v1.5.1</strong>
+              <strong className="font-semibold">更新ブログ v1.5.1</strong>
               <svg
                 width="2"
                 height="2"
@@ -41,7 +40,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 <circle cx="1" cy="1" r="1"></circle>
               </svg>
               <span className="ml-2 hidden min-[1372px]:inline">
-                开源项目，开发者日记 · 支持 B 站各类型链接 & 自定义输出结果 🎉
+              オープンソース プロジェクト、開発者日記 さまざまな種類の YouTube リンクとカスタム出力結果をサポート 🎉
               </span>
               <svg
                 width="3"
@@ -70,10 +69,10 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 target="_blank"
                 className="flex items-center space-x-2"
               >
-                🔥<span className="hidden pl-1 sm:block">提</span>反馈
+                🔥<span className="hidden pl-1 sm:block">提</span>フィードバック
               </a>
             </TooltipTrigger>
-            <TooltipContent>那可太感谢啦！</TooltipContent>
+            <TooltipContent>どうもありがとうございます！</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger>
@@ -82,15 +81,15 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 rel="noreferrer noopener"
                 target="_blank"
                 className="flex hidden items-center space-x-2 sm:block"
-                aria-label="书签版"
-                onClick={() => alert('🔖请拖至书签栏，进入B站或YouTube视频页面，再来点击书签哦！')}
+                aria-label="ブックマークバージョン"
+                onClick={() => alert('🔖ブックマークバーにドラッグして、YouTubeビデオページに入り、ブックマークをクリックしてください。')}
               >
                 🔖
-                <span className="relin-paragraph-target pl-1 text-slate-500">(书签版)</span>
+                <span className="relin-paragraph-target pl-1 text-slate-500">(ブックマークバージョン)</span>
               </a>
             </TooltipTrigger>
             <TooltipContent>
-              <p>🔖请拖至书签栏，进入B站视频页面再点击书签哦！</p>
+              <p>🔖ブックマークバーにドラッグしてB局の動画ページに入ってブックマークをクリックしてください！</p>
             </TooltipContent>
           </Tooltip>
           <a
@@ -98,12 +97,12 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
             rel="noreferrer noopener"
             target="_blank"
             className="flex items-center space-x-2"
-            aria-label="iOS版"
+            aria-label="iOS"
           >
             <Image src="/shortcuts.png" alt="logo" width={33} height={33} className="max-w-none" />
-            <span className="relin-paragraph-target hidden text-slate-500 sm:block">(iOS版)</span>
+            <span className="relin-paragraph-target hidden text-slate-500 sm:block">(iOS)</span>
           </a>
-          <a href="https://github.com/JimmyLv/BibiGPT" rel="noreferrer noopener" target="_blank" className="">
+          <a href="https://github.com/JimmyLv/not_set_github" rel="noreferrer noopener" target="_blank" className="">
             <Github width="33" height="33" />
           </a>
           <SignIn showSingIn={showSingIn} />
