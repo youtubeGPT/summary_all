@@ -59,7 +59,7 @@ export default function UserDropdown() {
               onClick={() => signOut({ redirect: false })}
             >
               <LogOut className="h-4 w-4" />
-              <p className="text-sm">サインアウトサインアウト</p>
+              <p className="text-sm">サインアウト</p>
             </button>
           </div>
         }

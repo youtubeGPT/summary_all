@@ -59,9 +59,8 @@ const SignInModal = ({
             onlyThirdPartyProviders
             // magicLink
             providers={[
-              'notion',
-              'github',
-              // "google", "facebook",
+              'google',
+              //"facebook",
               // "twitter",
             ]}
             appearance={{
@@ -79,13 +78,13 @@ const SignInModal = ({
           />
         </div>
         <p className="pb-6 text-center text-slate-400">
-        クリックしてログインすると、
+          クリックしてログインすると、
           <a href="/terms-of-use" target="_blank" className="group underline" aria-label="服务条款">
-          利用規約
+            利用規約
           </a>
           と
           <Link href="/privacy" target="_blank" className="group underline" aria-label="隐私声明">
-          プライバシーポリシーを同意する
+            プライバシーポリシーを同意する
           </Link>
           。
         </p>
