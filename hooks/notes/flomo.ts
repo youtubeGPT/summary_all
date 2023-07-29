@@ -15,7 +15,7 @@ export function useSaveToFlomo(note: string, video: string, webhook: string) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        content: `${note}\n\nオリジナルビデオ：${video}\n#BibiGpt`,
+        content: `${note}\n\nオリジナルビデオ：${video}\n#YoutubeGPT`,
       }),
     })
     const json = await response.json()

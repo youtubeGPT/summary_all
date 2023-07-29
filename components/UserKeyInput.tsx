@@ -34,9 +34,7 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
             「回数購入」
           </a>
           ！
-          <a href="/wechat.jpg" target="_blank" rel="noopener noreferrer">
-            それとも
-            <span className="text-pink-400 hover:underline">「投げ銭を」</span> 🤣）
+          <a href="/wechat.jpg" target="_blank" rel="noopener noreferrer">）
           </a>
         </p>
       </summary>

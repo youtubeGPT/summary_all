@@ -17,7 +17,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
           </a>
           <a href={BASE_DOMAIN}>
             <h2 className={clsx('text-lg sm:text-2xl', poppins.className)}>
-              <span className="text-pink-400">ビープ音ターミネーター</span> BibiGPT
+              <span className="text-pink-400">Youtube要約</span> YoutubeSum
             </h2>
           </a>
           <div
@@ -29,7 +29,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
               href="/release"
               target="_blank"
             >
-              <strong className="font-semibold">更新ブログ v1.5.1</strong>
+              <strong className="font-semibold">更新中！</strong>
               <svg
                 width="2"
                 height="2"
@@ -40,7 +40,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 <circle cx="1" cy="1" r="1"></circle>
               </svg>
               <span className="ml-2 hidden min-[1372px]:inline">
-              オープンソース プロジェクト、開発者日記 さまざまな種類の YouTube リンクとカスタム出力結果をサポート 🎉
+              GitHub オープンソース プロジェクト 🎉
               </span>
               <svg
                 width="3"
@@ -69,7 +69,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 target="_blank"
                 className="flex items-center space-x-2"
               >
-                🔥<span className="hidden pl-1 sm:block">提</span>フィードバック
+                🔥<span className="hidden pl-1 sm:block">フィード</span>フィードバック
               </a>
             </TooltipTrigger>
             <TooltipContent>どうもありがとうございます！</TooltipContent>
@@ -81,11 +81,11 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
                 rel="noreferrer noopener"
                 target="_blank"
                 className="flex hidden items-center space-x-2 sm:block"
-                aria-label="ブックマークバージョン"
+                aria-label="ブックマーク"
                 onClick={() => alert('🔖ブックマークバーにドラッグして、YouTubeビデオページに入り、ブックマークをクリックしてください。')}
               >
                 🔖
-                <span className="relin-paragraph-target pl-1 text-slate-500">(ブックマークバージョン)</span>
+                <span className="relin-paragraph-target pl-1 text-slate-500">(ブックマーク)</span>
               </a>
             </TooltipTrigger>
             <TooltipContent>

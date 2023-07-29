@@ -48,7 +48,7 @@ export default function useSaveToLark(note: string, video: string, webhook: stri
         header: {
           template: 'blue',
           title: {
-            content: 'BibiGPT_not_set ビデオ概要',
+            content: 'YoutubeGPT_not_set ビデオ概要',
             tag: 'plain_text',
           },
         },

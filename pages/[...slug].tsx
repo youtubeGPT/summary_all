@@ -3,7 +3,7 @@ import getVideoId from 'get-video-id'
 import type { NextPage } from 'next'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import useFormPersist from 'react-hook-form-persist'
 import { useAnalytics } from '~/components/context/analytics'
@@ -158,7 +158,7 @@ export const Home: NextPage<{
     const regex = /((?:https?:\/\/|www\.)\S+)/g
     const matches = value.match(regex)
     if (matches && matches[0].includes('b23.tv')) {
-      toast({ title: '正在自动转换此视频链接...' })
+      toast({ title: 'このリンクを自動的に変換します...' })
       const response = await fetch(`/api/b23tv?url=${matches[0]}`)
       const json = await response.json()
       setCurrentVideoUrl(json.url)
@@ -179,7 +179,7 @@ export const Home: NextPage<{
           value={currentVideoUrl}
           onChange={handleInputChange}
           className="mx-auto mt-10 w-full appearance-none rounded-lg rounded-md border bg-transparent py-2 pl-2 text-sm leading-6 text-slate-900 shadow-sm ring-1 ring-slate-200 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder={'输入 bilibili.com/youtube.com 视频链接，按下「回车」'}
+          placeholder={'youtube.comリンクを入力して「Enter」を押してください'}
         />
         <SubmitButton loading={loading} />
         <PromptOptions getValues={getValues} register={register} />

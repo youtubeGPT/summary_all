@@ -10,7 +10,7 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "repository": "https://github.com/JimmyLv/BibiGPT.git",
+  "repository": "https://github.com/JimmyLv/YoutubeGPT.git",
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
     "@next/font": "^13.1.5",
