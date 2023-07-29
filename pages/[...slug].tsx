@@ -12,7 +12,6 @@ import { SubmitButton } from '~/components/SubmitButton'
 import { SummaryResult } from '~/components/SummaryResult'
 import { TypingSlogan } from '~/components/TypingSlogan'
 import { UsageAction } from '~/components/UsageAction'
-import { UsageDescription } from '~/components/UsageDescription'
 import { UserKeyInput } from '~/components/UserKeyInput'
 import { useToast } from '~/hooks/use-toast'
 import { useLocalStorage } from '~/hooks/useLocalStorage'
@@ -169,7 +168,7 @@ export const Home: NextPage<{
 
   return (
     <div className="mt-10 w-full px-4 sm:mt-40 lg:px-0">
-      <UsageDescription />
+      {/* <UsageDescription /> */}
       <TypingSlogan />
       <UsageAction />
       <UserKeyInput value={userKey} onChange={handleApiKeyChange} />

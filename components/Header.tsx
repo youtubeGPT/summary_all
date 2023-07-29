@@ -64,12 +64,12 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
           <Tooltip>
             <TooltipTrigger>
               <a
-                href="https://jimmylv.feishu.cn/share/base/form/shrcn9PwPzGGGiJCnH0JNfM1P3b"
+                href="https://github.com/MinxZ/summary_all"
                 rel="noreferrer noopener"
                 target="_blank"
                 className="flex items-center space-x-2"
               >
-                🔥<span className="hidden pl-1 sm:block">フィード</span>フィードバック
+                🔥<span className="hidden pl-1 sm:block"></span>フィードバック
               </a>
             </TooltipTrigger>
             <TooltipContent>どうもありがとうございます！</TooltipContent>
@@ -89,7 +89,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
               </a>
             </TooltipTrigger>
             <TooltipContent>
-              <p>🔖ブックマークバーにドラッグしてB局の動画ページに入ってブックマークをクリックしてください！</p>
+              <p>🔖ブックマークバーにドラッグしてクリックしてください！</p>
             </TooltipContent>
           </Tooltip>
           <a

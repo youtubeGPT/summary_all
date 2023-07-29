@@ -1,8 +1,8 @@
 export const PROMPT_LANGUAGE_MAP: { [key: string]: string } = {
+  日本語: 'ja-JP',
   English: 'en-US',
   中文: 'zh-CN',
   繁體中文: 'zh-TW',
-  日本語: 'ja-JP',
   Italiano: 'it-IT',
   Deutsch: 'de-DE',
   Español: 'es-ES',
@@ -13,4 +13,4 @@ export const PROMPT_LANGUAGE_MAP: { [key: string]: string } = {
   हिंदी: 'hi-IN',
 }
 
-export const DEFAULT_LANGUAGE = 'zh-CN'
+export const DEFAULT_LANGUAGE = 'ja-JP'
