@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Dispatch, SetStateAction, useCallback, useMemo, useState } from 'react'
 import { useAnalytics } from '~/components/context/analytics'
 import Modal from '~/components/shared/modal'
-import { BASE_DOMAIN, CHECKOUT_URL, LOGIN_LIMIT_COUNT } from '~/utils/constants'
+import { BASE_DOMAIN } from '~/utils/constants'
 import { getRedirectURL } from '~/utils/getRedirectUrl'
 
 const SignInModal = ({
@@ -27,8 +27,8 @@ const SignInModal = ({
           <a href={BASE_DOMAIN}>
             <Image src="/tv-logo.png" alt="Logo" className="h-10 w-10 rounded-full" width={20} height={20} />
           </a>
-          <h3 className="font-display text-2xl font-bold">登录 YoutubeGPT</h3>
-          <h4>
+          <h3 className="font-display text-2xl font-bold">YoutubeGPT 登録</h3>
+          {/* <h4>
             1日あたり{LOGIN_LIMIT_COUNT}回がもらえる，
             <a
               className="relative text-pink-400 hover:underline"
@@ -39,7 +39,7 @@ const SignInModal = ({
             </a>
             新しい回数
           </h4>
-          <p className="text-sm text-pink-400">Input, Prompt, Output</p>
+          <p className="text-sm text-pink-400">Input, Prompt, Output</p> */}
         </div>
 
         <div className="flex flex-col space-y-4 bg-gray-50 px-4 py-8 md:px-16">
