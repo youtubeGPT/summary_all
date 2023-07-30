@@ -42,7 +42,7 @@ export default function Footer() {
             <span className="sr-only">Twitter</span>
           </div>
         </Link>
-        <Link href="https://github.com/not_set_github" className="group" aria-label="not_set on GitHub">
+        <Link href="https://github.com/youtubeGPT/summary_all" className="group" aria-label="not_set on GitHub">
           <div
             className={buttonVariants({
               size: 'sm',

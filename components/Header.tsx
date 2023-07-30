@@ -100,7 +100,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
             <Image src="/shortcuts.png" alt="logo" width={33} height={33} className="max-w-none" />
             <span className="relin-paragraph-target hidden text-slate-500 sm:block">(iOS)</span>
           </a>
-          <a href="https://github.com/jimmylv_wait_to_change/not_set_github" rel="noreferrer noopener" target="_blank" className="">
+          <a href="https://github.com/youtubeGPT/summary_all" rel="noreferrer noopener" target="_blank" className="">
             <Github width="33" height="33" />
           </a> */}
           {/* Put SignIn buttom to the right of the header. */}

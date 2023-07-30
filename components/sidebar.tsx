@@ -66,7 +66,7 @@ export function Sidebar() {
                 >
                   <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">メモをエクスポートする</span>
+                {/* <span className="ml-3 flex-1 whitespace-nowrap">メモをエクスポートする</span> */}
                 <span className="ml-3 inline-flex items-center justify-center rounded-full bg-gray-200 px-2 text-sm font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-300">
                   Pro
                 </span>
@@ -111,7 +111,7 @@ export function Sidebar() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">報酬プログラム</span>
+                {/* <span className="ml-3 flex-1 whitespace-nowrap">報酬プログラム</span> */}
               </a>
             </li>
           </ul>
