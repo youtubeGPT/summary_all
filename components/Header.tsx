@@ -18,7 +18,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
               <span className="text-pink-400">Youtube要約</span> YoutubeSum
             </h2>
           </a>
-          <div
+          {/* <div
             id="banner"
             className="z-50 mx-4 flex hidden w-auto justify-center border-b border-slate-900/10 py-4 dark:border-slate-300/10 lg:mx-0 lg:block lg:border-0 lg:px-8"
           >
@@ -27,8 +27,83 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
               href="/release"
               target="_blank"
             >
-          <SignIn showSingIn={showSingIn} />
+              <strong className="font-semibold">更新中！</strong>
+              <svg
+                width="2"
+                height="2"
+                fill="currentColor"
+                aria-hidden="true"
+                className="ml-2 text-sky-600 dark:text-sky-400/70"
+              >
+                <circle cx="1" cy="1" r="1"></circle>
+              </svg>
+              <span className="ml-2 hidden min-[1372px]:inline">
+              GitHub オープンソース プロジェクト 🎉
+              </span>
+              <svg
+                width="3"
+                height="6"
+                className="ml-3 overflow-visible text-sky-300 dark:text-sky-400"
+                aria-hidden="true"
+              >
+                <path
+                  d="M0 0L3 3L0 6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+            </a>
           </div>
+        </div>
+        <div className="flex shrink-0 items-center space-x-2 sm:space-x-5">
+          <Tooltip>
+            <TooltipTrigger>
+              <a
+                href="https://github.com/MinxZ/summary_all"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="flex items-center space-x-2"
+              >
+                🔥<span className="hidden pl-1 sm:block"></span>フィードバック
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>どうもありがとうございます！</TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger>
+              <a
+                href="javascript:(function(){if (window.location.hostname.includes('bilibili.com') || window.location.hostname.includes('youtube.com')) {window.open(location.href.replace('.com', '.jimmylv_wait_to_change.cn'), '_blank');} else {alert('🔖请进入B站或YouTube视频页面，再来点击书签哦！');}}())"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="flex hidden items-center space-x-2 sm:block"
+                aria-label="ブックマーク"
+                onClick={() => alert('🔖ブックマークバーにドラッグして、YouTubeビデオページに入り、ブックマークをクリックしてください。')}
+              >
+                🔖
+                <span className="relin-paragraph-target pl-1 text-slate-500">(ブックマーク)</span>
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>🔖ブックマークバーにドラッグしてクリックしてください！</p>
+            </TooltipContent>
+          </Tooltip>
+          <a
+            href={BASE_DOMAIN + '/ios'}
+            rel="noreferrer noopener"
+            target="_blank"
+            className="flex items-center space-x-2"
+            aria-label="iOS"
+          >
+            <Image src="/shortcuts.png" alt="logo" width={33} height={33} className="max-w-none" />
+            <span className="relin-paragraph-target hidden text-slate-500 sm:block">(iOS)</span>
+          </a>
+          <a href="https://github.com/jimmylv_wait_to_change/not_set_github" rel="noreferrer noopener" target="_blank" className="">
+            <Github width="33" height="33" />
+          </a> */}
+          <SignIn showSingIn={showSingIn} />
         </div>
       </div>
     </header>
