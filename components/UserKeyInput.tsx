@@ -22,7 +22,7 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
           />
         </svg>
         <p className="text-left font-medium">
-          <span className="text-sky-400 hover:text-sky-600">独自の API キーを使用してください</span>
+          <span className="text-sky-400 hover:text-sky-600">独自の API キーの使用も可能です</span>
           （1 日あたり {RATE_LIMIT_COUNT} 回無料、回数制限を解除するには、
           <a
             className="text-pink-400 hover:underline"
