@@ -10,7 +10,7 @@ module.exports = {
   images: {
     domains: [
       process.env.SUPABASE_HOSTNAME || 'xxxx.supabase.co', // to prevent vercel failed
-      'b.jimmylv.cn',
+      'summary-all-ten.vercel.app',
       'avatars.dicebear.com',
       // "i2.hdslb.com",
       // "avatars.githubusercontent.com",

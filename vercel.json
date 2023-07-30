@@ -10,17 +10,17 @@
     },
     {
       "source": "/f",
-      "destination": "https://jimmylv.feishu.cn/share/base/form/shrcn9PwPzGGGiJCnH0JNfM1P3b",
+      "destination": "https://jimmylv_wait_to_change.feishu.cn/share/base/form/shrcn9PwPzGGGiJCnH0JNfM1P3b",
       "permanent": true
     },
     {
       "source": "/f-g",
-      "destination": "https://github.com/JimmyLv/YoutubeGPT/issues",
+      "destination": "https://github.com/youtubeGPT/summary_all/issues",
       "permanent": true
     },
     {
       "source": "/f-v",
-      "destination": "https://vercel.com/jimmylv/chat-bilibili-video/analytics/audience",
+      "destination": "https://vercel.com/jimmylv_wait_to_change/chat-bilibili-video/analytics/audience",
       "permanent": true
     },
     {
@@ -30,22 +30,22 @@
     },
     {
       "source": "/privacy",
-      "destination": "https://github.com/JimmyLv/YoutubeGPT/wiki/%E9%9A%90%E7%A7%81%E5%A3%B0%E6%98%8E",
+      "destination": "https://github.com/youtubeGPT/summary_all/wiki/%E9%9A%90%E7%A7%81%E5%A3%B0%E6%98%8E",
       "permanent": true
     },
     {
       "source": "/terms-of-use",
-      "destination": "https://github.com/JimmyLv/YoutubeGPT/wiki/Terms-Of-Use",
+      "destination": "https://github.com/youtubeGPT/summary_all/wiki/Terms-Of-Use",
       "permanent": true
     },
     {
       "source": "/status",
-      "destination": "https://github.com/JimmyLv/YoutubeGPT",
+      "destination": "https://github.com/youtubeGPT/summary_all",
       "permanent": true
     },
     {
       "source": "/release",
-      "destination": "https://github.com/JimmyLv/YoutubeGPT/releases",
+      "destination": "https://github.com/youtubeGPT/summary_all/releases",
       "permanent": true
     }
   ]

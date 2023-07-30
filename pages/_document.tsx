@@ -5,7 +5,7 @@ class MyDocument extends Document {
   render() {
     let description = 'Youtubeビデオコンテンツのワンクリック要約（iOSショートカットコマンドをサポート）'
     let ogimage = `${BASE_DOMAIN}/og-image.png`
-    let sitename = 'b.jimmylv_not_set.cn'
+    let sitename = 'b.jimmylv_wait_to_change_not_set.cn'
     let title = 'ワンクリックで動画コンテンツをまとめられる'
 
     return (

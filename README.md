@@ -1,16 +1,16 @@
-# 🤖 YoutubeGPT: 1-Click AI Summary for Audio/Video & Chat with Learning Content [https://YoutubeGPT.co](https://b.jimmylv.cn/)
+# 🤖 YoutubeGPT: 1-Click AI Summary for Audio/Video & Chat with Learning Content [https://YoutubeGPT.co](https://summary-all-ten.vercel.app/)
 
 🎉 Effortlessly summarize YouTube videos with our AI-driven Video Summarizer. Also works for Podcasts, Twitter, Meetings, Lectures, Tiktok videos, and more. Discover a smarter way to learn with ChatGPT, your best AI-powered study companion! (formerly BiliGPT) "stream-saving artifact & class representative".
 
-Alternate address: https://b.jimmylv.cn
+Alternate address: https://summary-all-ten.vercel.app
 
 ---
 
-## 🤖 YoutubeGPT · AI 音视频内容一键总结 & 对话 [https://YoutubeGPT.co](https://b.jimmylv.cn/)
+## 🤖 YoutubeGPT · AI 音视频内容一键总结 & 对话 [https://YoutubeGPT.co](https://summary-all-ten.vercel.app/)
 
 🎉 ChatGPT AI 音视频一键总结，轻松学习哔哩哔哩丨 YouTube 丨本地视频丨本地音频丨播客丨小红书丨抖音丨会议丨讲座丨网页等任意内容。YoutubeGPT 助力于成为最好的 AI 学习助理，支持免费试用！(原 BiliGPT 省流神器 & AI 课代表)（支持 iOS 快捷指令 & 微信服务号）。
 
-备用地址：https://b.jimmylv.cn
+备用地址：https://summary-all-ten.vercel.app
 
 ---
 
@@ -53,7 +53,7 @@ Setup the env variables, by following the `./example.env` file.
 
 ## Support Docker
 
-https://github.com/JimmyLv/YoutubeGPT/pull/133
+https://github.com/youtubeGPT/summary_all/pull/133
 
 ```shell
 # make sure setup .env file firstly
@@ -66,12 +66,12 @@ docker compose up -d
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=JimmyLv/YoutubeGPT&type=Date)](https://star-history.com/#JimmyLv/YoutubeGPT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=youtubeGPT/summary_all&type=Date)](https://star-history.com/#youtubeGPT/summary_all&Date)
 
 ## Contributors
 
 This project exists thanks to all the people who contribute.
 
- <a href="https://github.com/JimmyLv/YoutubeGPT/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=JimmyLv/YoutubeGPT" />
+ <a href="https://github.com/youtubeGPT/summary_all/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=youtubeGPT/summary_all" />
  </a>

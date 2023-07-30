@@ -74,7 +74,7 @@ export const Home: NextPage<{
 
   useEffect(() => {
     // https://www.youtube.com/watch?v=DHhOgWPKIKU
-    // todo: support redirect from www.youtube.jimmylv.cn/watch?v=DHhOgWPKIKU
+    // todo: support redirect from www.youtube.jimmylv_wait_to_change.cn/watch?v=DHhOgWPKIKU
     const validatedUrl = getVideoIdFromUrl(router.isReady, currentVideoUrl, urlState, searchParams)
 
     console.log('getVideoUrlFromUrl', validatedUrl)

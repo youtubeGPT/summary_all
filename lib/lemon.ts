@@ -15,7 +15,7 @@ export async function activateLicenseKey(licenseKey: string, bvId?: string) {
     },
     body: JSON.stringify({
       license_key: licenseKey,
-      instance_name: bvId || 'b.jimmylv.cn',
+      instance_name: bvId || 'summary-all-ten.vercel.app',
     }),
   })
   const result = await response.json()
@@ -32,7 +32,7 @@ export async function validateLicenseKey(licenseKey: string, bvId?: string) {
     },
     body: JSON.stringify({
       license_key: licenseKey,
-      instance_name: bvId || 'b.jimmylv.cn',
+      instance_name: bvId || 'summary-all-ten.vercel.app',
     }),
   })
   const result = await response.json()
