@@ -18,7 +18,7 @@ Alternate address: https://summary-all-ten.vercel.app
 
 🤯 Inspired by [Nutlope/news-summarizer](https://github.com/Nutlope/news-summarizer) & [zhengbangbo/chat-simplifier](https://github.com/zhengbangbo/chat-simplifier/) & [lxfater/BilibiliSummary](https://github.com/lxfater/BilibiliSummary)
 
-[![YoutubeGPT音视频总结神器](./public/YoutubeGPT.gif)](https://twitter.com/Jimmy_JingLv/status/1630137750572728320?s=20)
+[![YoutubeGPT音视频总结](./public/YoutubeGPT.gif)](https://twitter.com/Jimmy_JingLv/status/1630137750572728320?s=20)
 
 🚀 First Launch: [【YoutubeGPT】AI 自动总结 B 站视频内容，GPT-3 智能提取并总结字幕](https://www.bilibili.com/video/BV1fX4y1Q7Ux/?vd_source=dd5a650b0ad84edd0d54bb18196ecb86)
 
