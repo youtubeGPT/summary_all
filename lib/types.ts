@@ -15,10 +15,10 @@ export type VideoConfig = {
 } & VideoConfigSchema
 
 export enum VideoService {
-  // Bilibili = 'bilibili',
+  Bilibili = 'bilibili',
   Youtube = 'youtube',
   // todo: integrate with whisper API
-  // Podcast = 'podcast',
+  Podcast = 'podcast',
   Meeting = 'meeting',
   LocalVideo = 'local-video',
   LocalAudio = 'local-audio',
