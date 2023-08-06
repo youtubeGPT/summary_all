@@ -4,7 +4,7 @@ import { SessionContextProvider } from '@supabase/auth-helpers-react'
 import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import CommandMenu from '~/components/CommandMenu'
 import { AnalyticsProvider } from '~/components/context/analytics'
 import { useSignInModal } from '~/components/sign-in-modal'
@@ -12,7 +12,6 @@ import { TailwindIndicator } from '~/components/tailwind-indicator'
 import { Toaster } from '~/components/ui/toaster'
 import { TooltipProvider } from '~/components/ui/tooltip'
 import { cn } from '~/lib/utils'
-import Footer from '../components/Footer'
 import Header from '../components/Header'
 import '../styles/globals.css'
 import '../styles/markdown.css'
@@ -44,7 +43,7 @@ function MyApp({
                 <Analytics />
                 <CommandMenu />
               </main>
-              <Footer />
+              {/* <Footer /> */}
             </div>
             <TailwindIndicator />
             <Toaster />
