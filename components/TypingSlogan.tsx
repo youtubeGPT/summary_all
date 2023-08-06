@@ -6,16 +6,16 @@ export function TypingSlogan() {
     <>
       <h1 className="h-[5rem] w-full text-center text-4xl font-bold sm:w-[64rem] sm:text-7xl">
       {' '}
-        <span className="relative whitespace-nowrap	text-pink-400">
+        <span className="relative whitespace-nowrap	text-red-400">
           <SquigglyLines />
           <TypeAnimation
             sequence={[
               'YouTube',
               2000,
-              'PodCast',
-              2000,
-              '会議',
-              2000,
+              // 'PodCast',
+              // 2000,
+              // '会議',
+              // 2000,
               () => {
                 console.log('Done typing!') // Place optional callbacks anywhere in the array
               },
@@ -23,7 +23,7 @@ export function TypingSlogan() {
             wrapper="span"
             cursor={true}
             repeat={Infinity}
-            className="relative text-pink-400	"
+            className="relative text-red-400	"
           />
         </span>{' '}
         を要約する <br />

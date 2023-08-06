@@ -12,7 +12,7 @@ export default function Footer() {
           href="https://openai.com/"
           target="_blank"
           rel="noreferrer"
-          className="font-bold underline-offset-2 transition hover:text-pink-400 hover:underline"
+          className="font-bold underline-offset-2 transition hover:text-red-400 hover:underline"
         >
           OpenAI{' '}
         </a>
@@ -21,7 +21,7 @@ export default function Footer() {
           href="https://vercel.com/"
           target="_blank"
           rel="noreferrer"
-          className="font-bold underline-offset-2 transition hover:text-pink-400 hover:underline"
+          className="font-bold underline-offset-2 transition hover:text-red-400 hover:underline"
         >
           Vercel Edge Functions.
         </a>

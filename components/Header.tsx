@@ -14,7 +14,7 @@ export default function Header({ showSingIn }: { showSingIn: (show: boolean) => 
           </a> */}
           <a href={BASE_DOMAIN}>
             <h2 className={clsx('text-lg sm:text-2xl', poppins.className)}>
-              <span className="text-pink-400">YoutubeGPT </span> 
+              <span className="text-red-400">YoutubeGPT </span> 
             </h2>
           </a>
           {/* <div

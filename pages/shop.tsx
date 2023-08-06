@@ -12,7 +12,7 @@ export default () => {
         <span className="relative whitespace-nowrap text-[#3290EE]">
           <SquigglyLines />
           <a
-            className="relative text-pink-400 hover:underline"
+            className="relative text-red-400 hover:underline"
             href={CHECKOUT_URL}
             onClick={() => analytics.track('ShopLink Clicked')}
           >

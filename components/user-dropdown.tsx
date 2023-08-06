@@ -1,6 +1,6 @@
 import { useSupabaseClient, useUser } from '@supabase/auth-helpers-react'
 import { motion } from 'framer-motion'
-import { Clover, Edit, LayoutDashboard, LogOut, ShoppingBag } from 'lucide-react'
+import { LogOut, ShoppingBag } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import Popover from '~/components/shared/popover'
@@ -26,20 +26,20 @@ export default function UserDropdown() {
       <Popover
         content={
           <div className="w-full rounded-md bg-white p-2 sm:w-56">
-            <Link
+            {/* <Link
               href="/user/videos"
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
             >
               <LayoutDashboard className="h-4 w-4" />
               <p className="text-sm">パーソナルセンター</p>
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href="/user/integration"
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
             >
               <Edit className="h-4 w-4" />
               <p className="text-sm">メモをエクスポートする</p>
-            </Link>
+            </Link> */}
             <Link
               href="/shop"
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
@@ -47,13 +47,13 @@ export default function UserDropdown() {
               <ShoppingBag className="h-4 w-4" />
               <p className="text-sm">回数購入</p>
             </Link>
-            <Link
+            {/* <Link
               href="/#"
               className="relative flex w-full cursor-not-allowed items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
             >
               <Clover className="h-4 w-4" />
               <p className="text-sm">報酬プログラム</p>
-            </Link>
+            </Link> */}
             <button
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
               onClick={() => signOut({ redirect: false })}

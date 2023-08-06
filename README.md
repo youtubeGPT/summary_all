@@ -1,6 +1,6 @@
 # 🤖 YoutubeGPT: 1-Click AI Summary for Audio/Video & Chat with Learning Content [https://YoutubeGPT.co](https://summary-all-ten.vercel.app/)
 
-🎉 Effortlessly summarize YouTube videos with our AI-driven Video Summarizer. Also works for Podcasts, Twitter, Meetings, Lectures, Tiktok videos, and more. Discover a smarter way to learn with ChatGPT, your best AI-powered study companion! (formerly BiliGPT) "stream-saving artifact & class representative".
+🎉 Effortlessly summarize YouTube videos with our AI-driven Video Summarizer. Also works for Lectures videos, and more. Discover a smarter way to learn with ChatGPT, your best AI-powered study companion! (formerly BiliGPT) "stream-saving artifact & class representative".
 
 Alternate address: https://summary-all-ten.vercel.app
 
@@ -14,7 +14,7 @@ Alternate address: https://summary-all-ten.vercel.app
 
 ---
 
-🎬 This project summarizes YouTube/Bilibili/Twitter/TikTok/Podcast/Lecture/Meeting/... videos or audios for you using AI.
+🎬 This project summarizes YouTube/Lecture/Meeting/... videos or audios for you using AI.
 
 🤯 Inspired by [Nutlope/news-summarizer](https://github.com/Nutlope/news-summarizer) & [zhengbangbo/chat-simplifier](https://github.com/zhengbangbo/chat-simplifier/) & [lxfater/BilibiliSummary](https://github.com/lxfater/BilibiliSummary)
 
