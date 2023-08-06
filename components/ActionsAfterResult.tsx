@@ -22,7 +22,7 @@ export function ActionsAfterResult({
   return (
     <div className="mx-auto mt-7 flex max-w-3xl flex-row-reverse gap-x-4">
       <a
-        className="flex w-32 cursor-pointer items-center justify-center rounded-lg bg-red-400 px-2 py-1 text-center font-medium text-white hover:bg-red-400/80"
+        className="flex w-32 cursor-pointer items-center justify-center rounded-lg bg-red-600 px-2 py-1 text-center font-medium text-white hover:bg-red-600/80"
         href="https://summary-all-ten.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"

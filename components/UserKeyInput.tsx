@@ -25,7 +25,7 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
           {/* <span className="text-sky-400 hover:text-sky-600">独自の API キーの使用も可能です</span> */}
           1 日あたり {RATE_LIMIT_COUNT} 無料、回数制限を解除するには、
           <a
-            className="text-red-400 hover:underline"
+            className="text-red-600 hover:underline"
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"

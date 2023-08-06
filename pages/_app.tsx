@@ -43,7 +43,7 @@ function MyApp({
                 <Analytics />
                 <CommandMenu />
               </main>
-              {/* <Footer /> */}
+              <Footer />
             </div>
             <TailwindIndicator />
             <Toaster />

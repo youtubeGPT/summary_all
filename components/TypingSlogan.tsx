@@ -6,7 +6,7 @@ export function TypingSlogan() {
     <>
       <h1 className="h-[5rem] w-full text-center text-4xl font-bold sm:w-[64rem] sm:text-7xl">
       {' '}
-        <span className="relative whitespace-nowrap	text-red-400">
+        <span className="relative whitespace-nowrap	text-red-600">
           <SquigglyLines />
           <TypeAnimation
             sequence={[
@@ -23,7 +23,7 @@ export function TypingSlogan() {
             wrapper="span"
             cursor={true}
             repeat={Infinity}
-            className="relative text-red-400	"
+            className="relative text-red-600	"
           />
         </span>{' '}
         を要約する <br />

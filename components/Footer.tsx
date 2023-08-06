@@ -1,7 +1,3 @@
-import { buttonVariants } from '@/components/ui/button'
-import Link from 'next/link'
-import { ModeToggle } from '~/components/mode-toggle'
-import { Icons } from './icons'
 
 export default function Footer() {
   return (
@@ -12,7 +8,7 @@ export default function Footer() {
           href="https://openai.com/"
           target="_blank"
           rel="noreferrer"
-          className="font-bold underline-offset-2 transition hover:text-red-400 hover:underline"
+          className="font-bold underline-offset-2 transition hover:text-red-600 hover:underline"
         >
           OpenAI{' '}
         </a>
@@ -21,12 +17,12 @@ export default function Footer() {
           href="https://vercel.com/"
           target="_blank"
           rel="noreferrer"
-          className="font-bold underline-offset-2 transition hover:text-red-400 hover:underline"
+          className="font-bold underline-offset-2 transition hover:text-red-600 hover:underline"
         >
           Vercel Edge Functions.
         </a>
       </div>
-      <div className="flex items-center space-x-1">
+      {/* <div className="flex items-center space-x-1">
         <Link href="/privacy" className="group" aria-label="プライバシーに関する声明">
           Privacy Statement
         </Link>
@@ -55,7 +51,7 @@ export default function Footer() {
           </div>
         </Link>
         <ModeToggle />
-      </div>
+      </div> */}
     </footer>
   )
 }

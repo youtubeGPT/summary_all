@@ -31,7 +31,7 @@ const SignInModal = ({
           {/* <h4>
             1日あたり{LOGIN_LIMIT_COUNT}回がもらえる，
             <a
-              className="relative text-red-400 hover:underline"
+              className="relative text-red-600 hover:underline"
               href={CHECKOUT_URL}
               onClick={() => analytics.track('ShopLink Clicked')}
             >
@@ -39,7 +39,7 @@ const SignInModal = ({
             </a>
             新しい回数
           </h4>
-          <p className="text-sm text-red-400">Input, Prompt, Output</p> */}
+          <p className="text-sm text-red-600">Input, Prompt, Output</p> */}
         </div>
 
         <div className="flex flex-col space-y-4 bg-gray-50 px-4 py-8 md:px-16">

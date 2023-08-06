@@ -7,11 +7,11 @@ export function UsageDescription() {
       className="mx-auto mb-5 hidden max-w-fit rounded-full border-2 border-dashed px-4 py-1 text-gray-500 transition duration-300 ease-in-out hover:scale-105 hover:border-gray-700 md:block"
       href="https://www.bilibili.com/video/BV1fX4y1Q7Ux/"
     >
-      Bilibili ビデオ URL のサフィックス「<span className="text-red-400">.com</span>」を私のドメイン名に変更するだけです。
+      Bilibili ビデオ URL のサフィックス「<span className="text-red-600">.com</span>」を私のドメイン名に変更するだけです。
        <span className="text-sky-400">jimmylv_wait_to_change.cn</span>" で十分です! 😉
        <br />
        たとえば、www.bilibili。
-      <span className="text-red-400 line-through">com</span>
+      <span className="text-red-600 line-through">com</span>
       /video/BV1k84y1e7fW 👉 www.bilibili.
       <span className="text-sky-400 underline">jimmylv_wait_to_change.cn</span>
       /video/BV1k84y1e7fW
