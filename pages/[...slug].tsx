@@ -82,6 +82,12 @@ export const Home: NextPage<{
     validatedUrl && generateSummary(validatedUrl)
   }, [router.isReady, urlState, searchParams])
 
+  useEffect(() => {
+    if (summary) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    }
+  }, [summary])
+
   const validateUrlFromAddressBar = (url?: string) => {
     // note: auto refactor by ChatGPT
     const videoUrl = url || currentVideoUrl
@@ -138,9 +144,6 @@ export const Home: NextPage<{
       { service: VideoService.Bilibili, videoId, pageNumber, ...formValues },
       { userKey, shouldShowTimestamp },
     )
-    setTimeout(() => {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
-    }, 10)
   }
   const onFormSubmit: SubmitHandler<VideoConfigSchema> = async (data) => {
     // e.preventDefault();
