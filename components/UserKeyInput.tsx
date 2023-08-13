@@ -33,19 +33,18 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
           >
             「回数購入」
           </a>
-          ！
-          <a href="/wechat.jpg" target="_blank" rel="noopener noreferrer">
-          </a>
         </p>
       </summary>
+
       {/* <div className="text-lg text-slate-700 dark:text-slate-400">
+
         <input
           value={props.value}
           onChange={props.onChange}
           className="mx-auto my-4 w-full appearance-none rounded-lg rounded-md border bg-transparent py-2 pl-2 text-sm leading-6 text-slate-900 shadow-sm ring-1 ring-slate-200 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder={'OpenAI API キー: sk-xxxxxx 。'}
-          // または購入したライセンス キー: xxx-CCDE-xxx を入力します
         />
+
         <div className="relin-paragraph-target mt-1 text-base text-slate-500">
           <div>
           自分のライセンス キーを取得する方法
@@ -58,8 +57,10 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
               https://openai.com/blog/openai-api
             </a>
           </div>
-        </div> */}
-      </div>
+        </div>
+
+      </div> */}
+
     </details>
   )
 }
