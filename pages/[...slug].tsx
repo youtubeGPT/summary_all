@@ -100,8 +100,8 @@ export const Home: NextPage<{
       !(videoUrl.includes('bilibili.com/video') || videoUrl.includes('youtube.com'))
     ) {
       toast({
-        title: '暂不支持此视频链接',
-        description: '请输入哔哩哔哩或YouTub视频链接，已支持b23.tv短链接',
+        title: 'このビデオリンクは現在サポートされていません',
+        description: 'YouTube ビデオのリンクを入力してください',
       })
       return
     }

@@ -12,11 +12,11 @@ export function PromptOptions({
   const shouldShowTimestamp = getValues('showTimestamp')
   return (
     <div className="mt-6 grid grid-cols-2 items-center gap-x-10 gap-y-2 md:mt-10 md:grid-cols-3 md:gap-y-6">
-      <label className="relative inline-flex cursor-pointer items-center">
+      {/* <label className="relative inline-flex cursor-pointer items-center">
         <input type="checkbox" value="" className="peer sr-only" {...register('showTimestamp')} />
         <div className="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-sky-400 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sky-300 dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-sky-800"></div>
         <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">タイムスタンプを表示するかどうか</span>
-      </label>
+      </label> */}
       <label className="relative inline-flex cursor-pointer items-center">
         <input type="checkbox" className="peer sr-only" {...register('showEmoji')} />
         <div className="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-sky-400 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sky-300 dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-sky-800"></div>
