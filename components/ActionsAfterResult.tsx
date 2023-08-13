@@ -33,7 +33,7 @@ export function ActionsAfterResult({
         target="_blank"
         rel="noreferrer"
       >
-        ビデオに戻る
+        ビデオへ
       </a>
       <button
         className="w-24 cursor-pointer rounded-lg bg-sky-400 px-2 py-1 text-center font-medium text-white hover:bg-sky-400/80"
