@@ -54,12 +54,12 @@ export function getUserSubtitlePrompt(title: string, transcript: any, videoConfi
     ? `Use the outline list, which can have a hierarchical structure of up to ${videoConfig.outlineLevel} levels. `
     : ''
   const prompt = `Your output should use the following template:\n## Summary\n## Highlights\n- ${emojiTemplateText}Bulletpoint${outlineTemplateText}\n\nYour task is to summarise the text I have given you in up to ${sentenceCount} concise bullet points, starting with a short highlight, each bullet point is at least ${wordsCount} words. ${outlineDescriptionText}${emojiDescriptionText}Use the text above: {{Title}} {{Transcript}}.\n\nReply in ${language} Language.`
-  if (enLanguage == 'ja-JP') {
-  const outlineDescriptionText = shouldShowAsOutline
-    ? `アウトライン リストを使用します。これは最大 ${videoConfig.outlineLevel} レベルの階層構造を持つことができます。`
-    : ''
-  const prompt = `出力では次のテンプレートを使用する必要があります:\n## まとめ\n## ハイライト\n- ${emojiTemplateText}箇条書き${outlineTemplateText}\n\nあなたの仕事は、私があなたに与えたテキストを最大 ${sentenceCount} 個の簡潔な箇条書きに要約することです。短いハイライトから始めて、各箇条書きは少なくとも ${wordsCount} 語以上になります。 ${outlineDescriptionText}${emojiDescriptionText}上記のテキストを使用します: {{Title}} {{Transcript}}.`
-  }
+  // if (enLanguage == 'ja-JP') {
+  //   const outlineDescriptionText = shouldShowAsOutline
+  //     ? `アウトライン リストを使用します。これは最大 ${videoConfig.outlineLevel} レベルの階層構造を持つことができます。`
+  //     : ''
+  //   const prompt = `出力では次のテンプレートを使用する必要があります:\n## まとめ\n## ハイライト\n- ${emojiTemplateText}箇条書き${outlineTemplateText}\n\nあなたの仕事は、私があなたに与えたテキストを最大 ${sentenceCount} 個の簡潔な箇条書きに要約することです。短いハイライトから始めて、各箇条書きは少なくとも ${wordsCount} 語以上になります。 ${outlineDescriptionText}${emojiDescriptionText}上記のテキストを使用します: {{Title}} {{Transcript}}.`
+  // }
 
   return `Title: "${videoTitle}"\nTranscript: "${videoTranscript}"\n\nInstructions: ${prompt}`
 
