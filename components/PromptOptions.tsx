@@ -20,7 +20,7 @@ export function PromptOptions({
       <label className="relative inline-flex cursor-pointer items-center">
         <input type="checkbox" className="peer sr-only" {...register('showEmoji')} />
         <div className="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-sky-400 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-sky-300 dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-sky-800"></div>
-        <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">絵文字を表示するかどうか</span>
+        <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">絵文字表示</span>
       </label>
       <div>
         <label htmlFor="outputLanguage" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
@@ -82,9 +82,9 @@ export function PromptOptions({
         <input
           id="detailLevel"
           type="range"
-          min={300}
+          min={200}
           max={1000}
-          step={10}
+          step={200}
           className="h-2 w-full cursor-pointer rounded-lg bg-gray-200 accent-black dark:bg-gray-700"
           {...register('detailLevel', {
             valueAsNumber: true,
