@@ -39,7 +39,7 @@ export function PromptOptions({
         </select>
       </div>
 
-      <div>
+      {/* <div>
         <label htmlFor="sentenceNumber" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
         ポイント数
           <span className="text-gray-500">(≤{getValues('sentenceNumber')})</span>
@@ -55,8 +55,8 @@ export function PromptOptions({
             valueAsNumber: true,
           })}
         />
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <label htmlFor="outlineLevel" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
         アウトラインレベル
           <span className="text-gray-500">(≤{getValues('outlineLevel')})</span>
@@ -73,7 +73,7 @@ export function PromptOptions({
             valueAsNumber: true,
           })}
         />
-      </div>
+      </div> */}
       <div>
         <label htmlFor="detailLevel" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
         詳細度
