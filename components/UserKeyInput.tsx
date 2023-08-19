@@ -1,5 +1,5 @@
-import { useAnalytics } from '~/components/context/analytics';
-import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants';
+import { useAnalytics } from '~/components/context/analytics'
+import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants'
 
 export function UserKeyInput(props: { value: string | undefined; onChange: (e: any) => void }) {
   const { analytics } = useAnalytics()
@@ -23,7 +23,7 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
         </svg>
         <p className="text-left font-medium">
           {/* <span className="text-sky-400 hover:text-sky-600">独自の API キーの使用も可能です</span> */}
-          1 日あたり {RATE_LIMIT_COUNT} 回無料、回数制限を解除するには、
+          登録すると {RATE_LIMIT_COUNT} 回無料で要約！　回数制限を解除するには、
           <a
             className="text-red-600 hover:underline"
             href={CHECKOUT_URL}
@@ -60,7 +60,6 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
         </div>
 
       </div> */}
-
     </details>
   )
 }
