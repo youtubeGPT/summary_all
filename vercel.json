@@ -29,11 +29,6 @@
       "permanent": true
     },
     {
-      "source": "/privacy",
-      "destination": "https://summary-all-ten.vercel.app/privacy",
-      "permanent": true
-    },
-    {
       "source": "/terms-of-use",
       "destination": "https://summary-all-ten.vercel.app/Terms-Of-Use",
       "permanent": true
