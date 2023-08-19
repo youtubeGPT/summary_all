@@ -1,7 +1,4 @@
-// pages/privacy.tsx
-//import React from 'react'
-
-const Privacy: React.FC = () => {
+export default () => {
   return (
     <div>
       <ul>
@@ -79,5 +76,3 @@ const Privacy: React.FC = () => {
     </div>
   )
 }
-
-export default Privacy

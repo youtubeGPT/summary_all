@@ -1,7 +1,4 @@
-// pages/privacy.tsx
-//import React from 'react'
-
-const Terms: React.FC = () => {
+export default () => {
   return (
     <div>
       <ul>
@@ -72,5 +69,3 @@ const Terms: React.FC = () => {
     </div>
   )
 }
-
-export default Terms
