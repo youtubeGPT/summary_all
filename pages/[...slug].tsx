@@ -100,8 +100,8 @@ export const Home: NextPage<{
       !(videoUrl.includes('bilibili.com/video') || videoUrl.includes('youtube.com'))
     ) {
       toast({
-        title: 'このビデオリンクは現在サポートされていません',
-        description: 'YouTube ビデオのリンクを入力してください',
+        title: 'このURLは現在サポートされていません',
+        description: 'YouTubeのURLを入力してください',
       })
       return
     }
