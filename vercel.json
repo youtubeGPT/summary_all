@@ -29,11 +29,6 @@
       "permanent": true
     },
     {
-      "source": "/terms-of-use",
-      "destination": "https://summary-all-ten.vercel.app/Terms-Of-Use",
-      "permanent": true
-    },
-    {
       "source": "/status",
       "destination": "https://github.com/youtubeGPT/summary_all",
       "permanent": true

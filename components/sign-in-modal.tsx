@@ -79,7 +79,7 @@ const SignInModal = ({
         </div>
         <p className="pb-6 text-center text-slate-400">
           クリックしてログインすると、
-          <a href="/terms-of-use" target="_blank" className="group underline" aria-label="服务条款">
+          <a href="/terms" target="_blank" className="group underline" aria-label="服务条款">
             利用規約
           </a>
           と
