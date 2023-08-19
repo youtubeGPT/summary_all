@@ -1,10 +1,4 @@
-import { useAnalytics } from '~/components/context/analytics'
-import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants'
-import SquigglyLines from '../components/SquigglyLines'
-
 export default () => {
-  const { analytics } = useAnalytics()
-
   return (
     <div>
       <ul>

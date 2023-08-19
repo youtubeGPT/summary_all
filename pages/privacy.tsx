@@ -1,5 +1,5 @@
 // pages/privacy.tsx
-import React from 'react'
+//import React from 'react'
 
 const Privacy: React.FC = () => {
   return (
