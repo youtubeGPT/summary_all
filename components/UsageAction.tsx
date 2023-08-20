@@ -5,7 +5,7 @@ export function UsageAction() {
       以下のフォームに、要約したい
       <a
         className="text-sky-400"
-        href="https://www.youtube.com/watch?v=--khbXchTeE&t=85s"
+        href="https://www.youtube.com/watch?v=fmWHx1GESeQ"
         target="_blank"
         rel="noopener noreferrer"
       >
