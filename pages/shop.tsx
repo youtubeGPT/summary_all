@@ -8,7 +8,7 @@ export default () => {
   return (
     <div>
       <h2 className="mt-10 max-w-5xl pb-10 text-center text-4xl font-bold sm:text-7xl">
-        回数切れ! 無料で {RATE_LIMIT_COUNT} 回利用できる。
+        無料で {RATE_LIMIT_COUNT} 回まで利用可能
         <span className="relative whitespace-nowrap text-[#3290EE]">
           <SquigglyLines />
           <a
@@ -16,7 +16,7 @@ export default () => {
             href={CHECKOUT_URL}
             onClick={() => analytics.track('ShopLink Clicked')}
           >
-            プライム会員は一ヶ月無制限で要約！
+            プライム会員は一ヶ月２００回まで利用可能
           </a>
         </span>
         {/* 回数、💰 */}
