@@ -1,9 +1,24 @@
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 export function SubmitButton({ loading }: { loading: boolean }) {
+  const [clickCount, setClickCount] = useState(0)
+  const router = useRouter()
+
+  const handleClick = () => {
+    setClickCount(clickCount + 1)
+
+    if (clickCount >= 4) {
+      // 因为从0开始计数，所以是4
+      router.push('/shop')
+    }
+  }
+
   if (!loading) {
     return (
       <button
+        onClick={handleClick}
         className="z-10 mx-auto mt-7 w-3/4 rounded-2xl border-gray-500 bg-sky-400 p-3 text-lg font-medium text-white transition hover:bg-sky-500 sm:mt-10 sm:w-1/3"
         type="submit"
       >
