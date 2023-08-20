@@ -49,7 +49,7 @@ export function getUserSubtitlePrompt(title: string, transcript: any, videoConfi
   const language = videoConfig.outputLanguage || DEFAULT_LANGUAGE
   const emojiTemplateText = videoConfig.showEmoji ? '[Emoji] ' : ''
   const emojiDescriptionText = videoConfig.showEmoji ? 'Choose an appropriate emoji for each bullet point. ' : ''
-  const wordsCount = videoConfig.detailLevel ? (Number(videoConfig.detailLevel) / 100) * 2 : 15
+  const wordsCount = videoConfig.detailLevel ? (Number(videoConfig.detailLevel) / 100) * 15 : 15
   const sentenceCount = (Number(videoConfig.detailLevel) / 100) * 2 || 7
   const shouldShowAsOutline = (Number(videoConfig.detailLevel) / 100)
   const outlineTemplateText = shouldShowAsOutline ? `\n    - Child points` : ''
