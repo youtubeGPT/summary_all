@@ -45,7 +45,7 @@ export default function UserDropdown() {
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
             >
               <ShoppingBag className="h-4 w-4" />
-              <p className="text-sm">回数購入</p>
+              <p className="text-sm">プレミアム会員</p>
             </Link>
             {/* <Link
               href="/#"

@@ -16,7 +16,7 @@ export default () => {
             href={CHECKOUT_URL}
             onClick={() => analytics.track('ShopLink Clicked')}
           >
-            プライム会員は一ヶ月２００回まで利用可能
+            プレミアム会員はこちら
           </a>
         </span>
         {/* 回数、💰 */}

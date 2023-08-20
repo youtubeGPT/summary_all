@@ -1,5 +1,5 @@
-import { useAnalytics } from '~/components/context/analytics'
-import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants'
+import { useAnalytics } from '~/components/context/analytics';
+import { CHECKOUT_URL, RATE_LIMIT_COUNT } from '~/utils/constants';
 
 export function UserKeyInput(props: { value: string | undefined; onChange: (e: any) => void }) {
   const { analytics } = useAnalytics()
@@ -31,7 +31,7 @@ export function UserKeyInput(props: { value: string | undefined; onChange: (e: a
             rel="noopener noreferrer"
             onClick={() => analytics.track('ShopLink Clicked')}
           >
-            「回数購入」
+            プレミアム会員
           </a>
         </p>
       </summary>
