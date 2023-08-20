@@ -57,7 +57,7 @@ export function getUserSubtitlePrompt(title: string, transcript: any, videoConfi
     const outlineDescriptionText = shouldShowAsOutline
       ? `アウトライン リストを使用します。これは最大 ${videoConfig.outlineLevel} レベルの階層構造を持つことができます。`
       : ''
-    const prompt = `出力では次のテンプレートを使用する必要があります:\n## まとめ\n## ハイライト\n- ${emojiTemplateText}箇条書き${outlineTemplateText}\n\nあなたの仕事は、私があなたに与えたテキストを最大 ${sentenceCount} 個の簡潔な箇条書きに要約することです。短いハイライトから始めて、各箇条書きは少なくとも ${wordsCount} 語以上になります。 ${outlineDescriptionText}${emojiDescriptionText}上記のテキストを使用します: {{Title}} {{Transcript}}.`
+    const prompt = `出力では次のテンプレートを使用する必要があります:\n## まとめ\n## ハイライト\n- ${emojiTemplateText}箇条書き${outlineTemplateText}\n\nあなたの仕事は、私があなたに与えたテキストを最大 ${sentenceCount} 個の簡潔な箇条書きに要約することです。短いハイライトから始めて、各箇条書きは少なくとも ${wordsCount} 語以上になります。 いつも文を終わらせるようにしてください。${outlineDescriptionText}${emojiDescriptionText}上記のテキストを使用します: {{Title}} {{Transcript}}.`
     return `Title: "${videoTitle}"\nTranscript: "${videoTranscript}"\n\nInstructions: ${prompt}`
   } else {
     const outlineDescriptionText = shouldShowAsOutline

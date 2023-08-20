@@ -82,7 +82,7 @@ export function PromptOptions({
         <input
           id="detailLevel"
           type="range"
-          min={200}
+          min={400}
           max={1000}
           step={200}
           className="h-2 w-full cursor-pointer rounded-lg bg-gray-200 accent-black dark:bg-gray-700"
