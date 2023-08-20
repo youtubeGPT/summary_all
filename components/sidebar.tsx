@@ -90,7 +90,7 @@ export function Sidebar() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">回数購入</span>
+                <span className="ml-3 flex-1 whitespace-nowrap">プレミアム会員</span>
               </a>
             </li>
             <li>
