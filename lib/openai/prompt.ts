@@ -25,20 +25,23 @@ export function getSystemPrompt(promptConfig: PromptConfig) {
   const { language = '中文', sentenceCount = '5', shouldShowTimestamp } = promptConfig
   // @ts-ignore
   const enLanguage = PROMPT_LANGUAGE_MAP[language]
-  // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），然后以无序列表的方式返回，不要超过5条。记得不要重复句子，确保所有的句子都足够精简，清晰完整，祝你好运！
-  const betterPrompt = `I want you to act as an educational content creator. You will help students summarize the essence of the video in ${enLanguage}. Please summarize the video subtitles (there may be typos in the subtitles, please correct them) and return them in an unordered list format. Please do not exceed ${sentenceCount} items, and make sure not to repeat any sentences and all sentences are concise, clear, and complete. Good luck!`
-  // const timestamp = ' ' //`（类似 10:24）`;
-  // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请先用一句简短的话总结视频梗概。然后再请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），在每句话的最前面加上时间戳${timestamp}，每句话开头只需要一个开始时间。请你以无序列表的方式返回，请注意不要超过5条哦，确保所有的句子都足够精简，清晰完整，祝你好运！
-  const promptWithTimestamp = `I would like you to act as a professional video content editor. You will help students summarize the essence of the video in ${enLanguage}. Please start by summarizing the whole video in one short sentence (there may be typos in the subtitles, please correct them). Then, please summarize the video subtitles, each subtitle should has the start timestamp (e.g. 12.4 -) so that students can select the video part. Please return in an unordered list format, make sure not to exceed ${sentenceCount} items and all sentences are concise, clear, and complete. Good luck!`
   if (enLanguage == 'ja-JP') {
     // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），然后以无序列表的方式返回，不要超过5条。记得不要重复句子，确保所有的句子都足够精简，清晰完整，祝你好运！
-    const betterPrompt = `教育コンテンツクリエイターとして活躍してほしい。ビデオの字幕を要約し (字幕にタイプミスがある可能性があります。修正してください)、順序なしリスト形式で返してください。 ${sentenceCount} 項目を超えないようにしてください。また、文を繰り返さず、すべての文が簡潔、明確、完全であるようにしてください。 幸運を！`
+    const betterPrompt = `コンテンツクリエイターとして活躍してほしい。ビデオの字幕を要約し (字幕にタイプミスがある可能性があります。修正してください)、順序なしリスト形式で返してください。 ${sentenceCount} 項目を超えないようにしてください。また、文を繰り返さず、すべての文が簡潔、明確、完全であるようにしてください。 幸運を！`
     // const timestamp = ' ' //`（类似 10:24）`;
     // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请先用一句简短的话总结视频梗概。然后再请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），在每句话的最前面加上时间戳${timestamp}，每句话开头只需要一个开始时间。请你以无序列表的方式返回，请注意不要超过5条哦，确保所有的句子都足够精简，清晰完整，祝你好运！
     const promptWithTimestamp = `プロの映像コンテンツ編集者として活躍していただきたいと思っています。まずはビデオ全体を短い文で要約してください (字幕にタイプミスがある可能性がありますので、修正してください)。 次に、ビデオの字幕を要約してください。ビデオ部分を選択できるように、各字幕には開始タイムスタンプ (例: 12.4 -) が含まれている必要があります。 順序なしリスト形式で返してください。項目数が ${sentenceCount} を超えないようにしてください。また、すべての文が簡潔、明確、完全であることを確認してください。 幸運を！`
+    return shouldShowTimestamp ? promptWithTimestamp : betterPrompt
+  } else{
+    // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），然后以无序列表的方式返回，不要超过5条。记得不要重复句子，确保所有的句子都足够精简，清晰完整，祝你好运！
+    const betterPrompt = `I want you to act as an educational content creator. You will help students summarize the essence of the video in ${enLanguage}. Please summarize the video subtitles (there may be typos in the subtitles, please correct them) and return them in an unordered list format. Please do not exceed ${sentenceCount} items, and make sure not to repeat any sentences and all sentences are concise, clear, and complete. Good luck!`
+    // const timestamp = ' ' //`（类似 10:24）`;
+    // 我希望你是一名专业的视频内容编辑，帮我用${language}总结视频的内容精华。请先用一句简短的话总结视频梗概。然后再请你将视频字幕文本进行总结（字幕中可能有错别字，如果你发现了错别字请改正），在每句话的最前面加上时间戳${timestamp}，每句话开头只需要一个开始时间。请你以无序列表的方式返回，请注意不要超过5条哦，确保所有的句子都足够精简，清晰完整，祝你好运！
+    const promptWithTimestamp = `I would like you to act as a professional video content editor. You will help students summarize the essence of the video in ${enLanguage}. Please start by summarizing the whole video in one short sentence (there may be typos in the subtitles, please correct them). Then, please summarize the video subtitles, each subtitle should has the start timestamp (e.g. 12.4 -) so that students can select the video part. Please return in an unordered list format, make sure not to exceed ${sentenceCount} items and all sentences are concise, clear, and complete. Good luck!`
+    return shouldShowTimestamp ? promptWithTimestamp : betterPrompt
   }
-  return shouldShowTimestamp ? promptWithTimestamp : betterPrompt
 }
+
 export function getUserSubtitlePrompt(title: string, transcript: any, videoConfig: VideoConfig) {
   
   const videoTitle = title?.replace(/\n+/g, ' ').trim()
@@ -50,18 +53,20 @@ export function getUserSubtitlePrompt(title: string, transcript: any, videoConfi
   const sentenceCount = (Number(videoConfig.detailLevel) / 100) * 2 || 7
   const shouldShowAsOutline = (Number(videoConfig.detailLevel) / 100)
   const outlineTemplateText = shouldShowAsOutline ? `\n    - Child points` : ''
-  const outlineDescriptionText = shouldShowAsOutline
-    ? `Use the outline list, which can have a hierarchical structure of up to ${videoConfig.outlineLevel} levels. `
-    : ''
-  const prompt = `Your output should use the following template:\n## Summary\n## Highlights\n- ${emojiTemplateText}Bulletpoint${outlineTemplateText}\n\nYour task is to summarise the text I have given you in up to ${sentenceCount} concise bullet points, starting with a short highlight, each bullet point is at least ${wordsCount} words. ${outlineDescriptionText}${emojiDescriptionText}Use the text above: {{Title}} {{Transcript}}.\n\nReply in ${language} Language. Translate the text to ${language} Language.`
   if (language == 'ja-JP') {
     const outlineDescriptionText = shouldShowAsOutline
       ? `アウトライン リストを使用します。これは最大 ${videoConfig.outlineLevel} レベルの階層構造を持つことができます。`
       : ''
     const prompt = `出力では次のテンプレートを使用する必要があります:\n## まとめ\n## ハイライト\n- ${emojiTemplateText}箇条書き${outlineTemplateText}\n\nあなたの仕事は、私があなたに与えたテキストを最大 ${sentenceCount} 個の簡潔な箇条書きに要約することです。短いハイライトから始めて、各箇条書きは少なくとも ${wordsCount} 語以上になります。 ${outlineDescriptionText}${emojiDescriptionText}上記のテキストを使用します: {{Title}} {{Transcript}}.`
+    return `Title: "${videoTitle}"\nTranscript: "${videoTranscript}"\n\nInstructions: ${prompt}`
+  } else {
+    const outlineDescriptionText = shouldShowAsOutline
+    ? `Use the outline list, which can have a hierarchical structure of up to ${videoConfig.outlineLevel} levels. `
+    : ''
+    const prompt = `Your output should use the following template:\n## Summary\n## Highlights\n- ${emojiTemplateText}Bulletpoint${outlineTemplateText}\n\nYour task is to summarise the text I have given you in up to ${sentenceCount} concise bullet points, starting with a short highlight, each bullet point is at least ${wordsCount} words. ${outlineDescriptionText}${emojiDescriptionText}Use the text above: {{Title}} {{Transcript}}.\n\nReply in ${language} Language. Translate the text to ${language} Language.`
+    return `Title: "${videoTitle}"\nTranscript: "${videoTranscript}"\n\nInstructions: ${prompt}`
   }
 
-  return `Title: "${videoTitle}"\nTranscript: "${videoTranscript}"\n\nInstructions: ${prompt}`
 
 
 }
