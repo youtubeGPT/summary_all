@@ -12,7 +12,6 @@ import { SubmitButton } from '~/components/SubmitButton'
 import { SummaryResult } from '~/components/SummaryResult'
 import { TypingSlogan } from '~/components/TypingSlogan'
 import { UsageAction } from '~/components/UsageAction'
-import { UserKeyInput } from '~/components/UserKeyInput'
 import { useToast } from '~/hooks/use-toast'
 import { useLocalStorage } from '~/hooks/useLocalStorage'
 import { useSummarize } from '~/hooks/useSummarize'
@@ -174,7 +173,7 @@ export const Home: NextPage<{
       {/* <UsageDescription /> */}
       <TypingSlogan />
       <UsageAction />
-      <UserKeyInput value={userKey} onChange={handleApiKeyChange} />
+      {/* <UserKeyInput value={userKey} onChange={handleApiKeyChange} /> */}
       <form onSubmit={handleSubmit(onFormSubmit)} className="grid place-items-center">
         <input
           type="text"
