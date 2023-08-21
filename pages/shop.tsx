@@ -8,7 +8,7 @@ export default () => {
   return (
     <div>
       <h2 className="mt-10 max-w-5xl pb-10 text-center text-4xl font-bold sm:text-7xl">
-        無料で {RATE_LIMIT_COUNT} 回まで利用可能
+         {RATE_LIMIT_COUNT} 回まで無料で利用可能
         <span className="relative whitespace-nowrap text-[#3290EE]">
           <SquigglyLines />
           <a
