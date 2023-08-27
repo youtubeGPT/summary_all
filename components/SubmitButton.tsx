@@ -1,17 +1,27 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useUser } from '@supabase/auth-helpers-react'
 
 export function SubmitButton({ loading }: { loading: boolean }) {
   const [clickCount, setClickCount] = useState(0)
   const router = useRouter()
-
+  const user = useUser()
+  const isLoggedIn = () => {
+    return user
+  }
   const handleClick = () => {
+    console.log('handleClick')
     setClickCount(clickCount + 1)
 
     if (clickCount >= 4) {
       // 因为从0开始计数，所以是4
       router.push('/shop')
+    }
+
+    if (!isLoggedIn()) {
+      console.log('not login')
+      router.push('/login')
     }
   }
 
