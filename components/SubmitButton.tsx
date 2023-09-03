@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useUser } from '@supabase/auth-helpers-react'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
 
 export function SubmitButton({ loading }: { loading: boolean }) {
   const [clickCount, setClickCount] = useState(0)
@@ -10,7 +13,11 @@ export function SubmitButton({ loading }: { loading: boolean }) {
   const isLoggedIn = () => {
     return user
   }
-  const handleClick = () => {
+  const generateRandomUserId = () => {
+    return Math.floor(10000000 + Math.random() * 90000000)
+  }
+
+  const handleClick = async () => {
     console.log('handleClick')
     setClickCount(clickCount + 1)
 
@@ -19,9 +26,56 @@ export function SubmitButton({ loading }: { loading: boolean }) {
       router.push('/shop')
     }
 
-    if (!isLoggedIn()) {
-      console.log('not login')
-      router.push('/login')
+    if (isLoggedIn() && user) {
+      // 检查邮箱是否已经存在
+      const { data: existingUser, error: existingUserError } = await supabase
+        .from('UserInfo')
+        .select('userEmail, LeftCount') // 添加 LeftCount 到查询中
+        .eq('userEmail', user.email)
+
+      if (existingUserError) {
+        console.error('Error fetching user: ', existingUserError)
+        return
+      }
+
+      // 如果邮箱不存在，插入一条新的记录
+      if (existingUser.length === 0) {
+        const { data, error } = await supabase.from('UserInfo').insert([
+          {
+            userId: generateRandomUserId(),
+            userEmail: user.email,
+            FreeOrPaid: 0,
+            UsedCount: 0,
+            LeftCount: 10,
+            paid_at: null,
+            created_at: new Date(),
+          },
+        ])
+
+        if (error) {
+          console.error('Error inserting user: ', error)
+        } else {
+          console.log('User inserted: ', data)
+        }
+      } else {
+        // 更新 LeftCount 列并检查是否需要跳转到 '/shop'
+        const updatedLeftCount = existingUser[0].LeftCount - 1
+
+        if (updatedLeftCount <= 0) {
+          router.push('/shop')
+        } else {
+          const { data: updateData, error: updateError } = await supabase
+            .from('UserInfo')
+            .update({ LeftCount: updatedLeftCount })
+            .eq('userEmail', user.email)
+
+          if (updateError) {
+            console.error('Error updating LeftCount: ', updateError)
+          } else {
+            console.log('LeftCount updated: ', updateData)
+          }
+        }
+      }
     }
   }
 
