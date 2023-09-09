@@ -37,7 +37,11 @@ export function SubmitButton({ loading }: { loading: boolean }) {
         console.error('Error fetching user: ', existingUserError)
         return
       }
-
+      if (existingUser && existingUser.length > 0) {
+        console.log('existingUser.length', existingUser.length)
+        console.log('existingUser.userEmail', existingUser[0].userEmail)
+        console.log('existingUser.LeftCount', existingUser[0].LeftCount)
+      }
       // 如果邮箱不存在，插入一条新的记录
       if (existingUser.length === 0) {
         const { data, error } = await supabase.from('UserInfo').insert([
@@ -76,6 +80,9 @@ export function SubmitButton({ loading }: { loading: boolean }) {
           }
         }
       }
+    } else {
+      console.log('not login')
+      router.push('/login')
     }
   }
 
