@@ -27,11 +27,12 @@ export function SubmitButton({ loading }: { loading: boolean }) {
     }
 
     if (isLoggedIn() && user) {
+      //keywordseverywhere.com/ctl/subscriptions?apiKey=
       // 检查邮箱是否已经存在
-      const { data: existingUser, error: existingUserError } = await supabase
+      https: const { data: existingUser, error: existingUserError } = await supabase
         .from('UserInfo')
-        .select('userEmail, LeftCount') // 添加 LeftCount 到查询中
-        .eq('userEmail', user.email)
+        .select('user_email, LeftCount') // 添加 LeftCount 到查询中
+        .eq('user_email', user.email)
 
       if (existingUserError) {
         console.error('Error fetching user: ', existingUserError)
@@ -39,15 +40,15 @@ export function SubmitButton({ loading }: { loading: boolean }) {
       }
       if (existingUser && existingUser.length > 0) {
         console.log('existingUser.length', existingUser.length)
-        console.log('existingUser.userEmail', existingUser[0].userEmail)
+        console.log('existingUser.user_email', existingUser[0].user_email)
         console.log('existingUser.LeftCount', existingUser[0].LeftCount)
       }
       // 如果邮箱不存在，插入一条新的记录
       if (existingUser.length === 0) {
         const { data, error } = await supabase.from('UserInfo').insert([
           {
-            userId: generateRandomUserId(),
-            userEmail: user.email,
+            user_id: generateRandomUserId(),
+            user_email: user.email,
             FreeOrPaid: 0,
             UsedCount: 0,
             LeftCount: 10,
@@ -64,14 +65,14 @@ export function SubmitButton({ loading }: { loading: boolean }) {
       } else {
         // 更新 LeftCount 列并检查是否需要跳转到 '/shop'
         const updatedLeftCount = existingUser[0].LeftCount - 1
-
+        console.log('updatedLeftCount', updatedLeftCount)
         if (updatedLeftCount <= 0) {
           router.push('/shop')
         } else {
           const { data: updateData, error: updateError } = await supabase
             .from('UserInfo')
             .update({ LeftCount: updatedLeftCount })
-            .eq('userEmail', user.email)
+            .eq('user_email', user.email)
 
           if (updateError) {
             console.error('Error updating LeftCount: ', updateError)
